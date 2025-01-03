@@ -72,5 +72,8 @@ Timeout Functions:
 start: Initializes the program with a 1-second delay.
 timeout: Executes the timeoutHandler function every 500 milliseconds, which advances the sequence.
 
+![image](https://github.com/user-attachments/assets/dd4dfeaa-70b5-4f4b-b316-e6bb3c9edefe)
+
+
 ![WhatsAppVideo2025-01-03at12 11 48-ezgif com-optimize (2)](https://github.com/user-attachments/assets/0b3ad6da-df27-4372-86d9-c8281bc919d0)
 
