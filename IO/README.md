@@ -18,3 +18,5 @@ A required initialization function that sets the first timeout after 1 second (1
 
 timeout Function:
 After the timeout expires, it calls timeoutHandler and sets a new timeout for the next relay operation.
+
+![image](https://github.com/user-attachments/assets/68b1e35c-d31b-4ba6-b17d-137318e7f4a6)
