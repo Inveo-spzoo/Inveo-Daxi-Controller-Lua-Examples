@@ -45,3 +45,32 @@ Calls timeoutHandler to check the input state and control the output.
 Sets the next timeout to 100 milliseconds (100 ms) for continuous input monitoring.
 
 ![image](https://github.com/user-attachments/assets/e09b1af0-6482-40c9-b9bb-fbfcbe04351e)
+
+3. output_sequence.lua
+
+This example demonstrates how to control channels sequentially, turning them On one by one from channel 1 to 8 and then turning them Off in reverse order (from channel 8 to 1).
+
+Code Explanation
+Output Channels:
+
+out_channels: Defines the list of channels to control. In this example, channels 0 to 7 correspond to physical channels 1 to 8.
+Sequence Logic:
+
+Channels are turned On sequentially during the first phase.
+Once all channels are On, they are turned Off sequentially in reverse order.
+The sequence loops indefinitely.
+Key Variables:
+
+current_step: Tracks the current channel being updated.
+is_turning_off: Boolean flag indicating whether the system is in the "turning Off" phase.
+updateOutput Function:
+
+Turns the current channel On using dev.out_default(channel, 1) during the "turning On" phase.
+Turns the current channel Off using dev.out_off(channel) during the "turning Off" phase.
+Timeout Functions:
+
+start: Initializes the program with a 1-second delay.
+timeout: Executes the timeoutHandler function every 500 milliseconds, which advances the sequence.
+
+![WhatsAppVideo2025-01-03at12 11 48-ezgif com-optimize (2)](https://github.com/user-attachments/assets/0b3ad6da-df27-4372-86d9-c8281bc919d0)
+
