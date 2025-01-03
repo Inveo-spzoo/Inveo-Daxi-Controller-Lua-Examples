@@ -1,20 +1,30 @@
 # Daxi HTTP Input Monitoring Script
 
-This is a simple Lua script created for Daxi devices. The purpose of this script is to monitor the states of multiple inputs and send data to a remote server using HTTP when an input is activated. It's a practical solution for situations where you need to keep track of different input signals and respond when one of them is active.
+This Lua script is designed for Daxi devices to monitor multiple input states and send HTTP notifications when an input is activated.
 
-## Features
+---
 
-- **Input Monitoring**: The script can check up to 8 different inputs to see which ones are active.
-- **HTTP Notifications**: It sends a message over the internet to a specified address whenever an input is detected as active.
-- **Easy Debugging**: The script logs the current status of each input to the console, which helps in monitoring and debugging.
+### **Code Explanation**
 
-## How It Works
+#### **Parameters Configuration**
+- **`n_devices`**: Total number of inputs to check (set to `8` for up to 8 input channels).
+- **`index`**: The current index of the input being checked, initialized to `0`.
 
-1. **Initialization**: The script begins by setting a timeout, which determines how often it checks the input states.
-2. **Checking Input States**: The `timeoutHandler` function loops through the inputs one by one to see which input is currently active. If an input is found to be active (state = 1), it logs this information and prepares to send data.
-3. **Sending Data**: When an active input is detected, the script creates a message that includes the index of the activated input. This message is then sent to a specific HTTP endpoint.
-4. **Continuous Monitoring**: After sending the data, the script continues to check all inputs in a loop, ensuring that it catches any newly activated inputs right away.
-5. **Resetting the Index**: When the script finishes checking all inputs, it resets the index to start checking from the first input again.
+#### **Functions**
+- **`timeoutHandler`**: 
+  - Loops through the inputs to check their states.
+  - Logs the current index and value of each input.
+  - Sends an HTTP notification if an input is activated (state = 1).
+  - Resets the index to start checking from the beginning after all inputs have been checked.
+
+- **`start`**: 
+  - A mandatory initialization function that sets the initial timeout interval to 1000 ms (1 second).
+
+- **`timeout`**: 
+  - Called when the timeout expires.
+  - Invokes the `timeoutHandler` to monitor input states and sets a new timeout for subsequent rounds of checking.
+
+---
 
 ![image](https://github.com/user-attachments/assets/0be33638-f986-44b1-8275-1911d7809a28)
 
