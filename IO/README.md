@@ -1,4 +1,4 @@
-
+1. blink.lua
 Example: Basic Blink with Built-In Relay on Daxi Controller
 
 This code demonstrates how to control the built-in relay on a Daxi controller by performing a simple blink operation. The example uses the out_blink function to toggle the relay with customizable timing.
@@ -20,3 +20,5 @@ timeout Function:
 After the timeout expires, it calls timeoutHandler and sets a new timeout for the next relay operation.
 
 ![image](https://github.com/user-attachments/assets/68b1e35c-d31b-4ba6-b17d-137318e7f4a6)
+
+2. input_output_control.lua
