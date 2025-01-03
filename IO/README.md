@@ -52,8 +52,8 @@ This example demonstrates how to control an output channel (e.g., a relay) based
 
 ![image](https://github.com/user-attachments/assets/e09b1af0-6482-40c9-b9bb-fbfcbe04351e)
 
-![Uploading WhatsAppVideo2025-01-03at12.54.52-ezgif.com-optimize.gif…]()
 
+![WhatsAppVideo2025-01-03at12 54 52-ezgif com-optimize](https://github.com/user-attachments/assets/bc87e437-5ada-4b10-98cc-bdfc87eea493)
 
 ## 3. **`output_sequence.lua` Example: Sequential Channel Activation**
 
