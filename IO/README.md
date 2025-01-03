@@ -22,3 +22,26 @@ After the timeout expires, it calls timeoutHandler and sets a new timeout for th
 ![image](https://github.com/user-attachments/assets/68b1e35c-d31b-4ba6-b17d-137318e7f4a6)
 
 2. input_output_control.lua
+
+This code demonstrates how to control an output channel (e.g., a relay) on a Daxi controller based on the state of an input channel. It uses the in_get function to check the input state and activates the output pulse conditionally.
+
+Code Explanation
+Parameters Configuration:
+
+in_channel: Specifies the input channel to monitor (set to 0).
+out_channel: Specifies the output channel to control (set to 0).
+ton: Duration for the output pulse, measured in 10-millisecond units. Here, ton = 10 means 100 milliseconds.
+toff: Delay before the output pulse starts, measured in 10-millisecond units. Here, toff = 0 means no delay.
+timeoutHandler Function:
+
+Checks the state of the input channel using dev.in_get(in_channel).
+If the input is active (true), it triggers a single pulse on the output channel using dev.out_single(out_channel, ton, toff).
+start Function:
+
+A mandatory initialization function that sets the first timeout to 1 second (1000 ms).
+timeout Function:
+
+Calls timeoutHandler to check the input state and control the output.
+Sets the next timeout to 100 milliseconds (100 ms) for continuous input monitoring.
+
+![image](https://github.com/user-attachments/assets/e09b1af0-6482-40c9-b9bb-fbfcbe04351e)
