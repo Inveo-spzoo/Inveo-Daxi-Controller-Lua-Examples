@@ -51,15 +51,15 @@ This README provides documentation for the Daxi Lua functions and libraries.
 - **Description**: Set output in single mode.
 - **Parameters**: 
   - `int channel`: Channel index starting from 0.
-  - `int ton`: Time of pulse.
-  - `int toff`: Delay before the pulse.
+  - `int ton`: Time of pulse. (1 - 0.1s)
+  - `int toff`: Delay before the pulse. (1 - 0.1s)
 
 #### `void out_blink(channel, ton, toff, cnt)`
 - **Description**: Set output in blink mode.
 - **Parameters**: 
   - `int channel`: Channel index starting from 0.
-  - `int ton`: Time of pulse.
-  - `int toff`: Delay before the pulse.
+  - `int ton`: Time of pulse. (1 - 0.1s)
+  - `int toff`: Delay before the pulse. (1 - 0.1s)
   - `int cnt`: Number of blinks.
 
 ---
