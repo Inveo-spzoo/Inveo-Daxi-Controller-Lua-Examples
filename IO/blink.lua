@@ -1,5 +1,5 @@
 channel = 0 -- io channel
-ton = 10 -- time of pulse
+ton = 10 -- Time of pulse (100 milliseconds)
 toff = 0 -- delay before the pulse
 blink_num = 1 -- number of blinks
 
